@@ -1,0 +1,228 @@
+/* إعدادات عامة */
+body {
+    background-color: #141414;
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* قائمة الأفلام */
+  .movie_list {
+    margin-left: 200px;
+  }
+  
+  /* رأس القائمة */
+  .movie_list_header {
+    padding: 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* العنوان الرئيسي */
+  .movie_list_heading {
+    font-size: 30px;
+    color: #ff1f1f;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  /* فلتر الأفلام */
+  .movie_filter {
+    list-style: none;
+    font-size: 16px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  /* عناصر الفلتر */
+  .movie_filter_item {
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 6px;
+    color: #ddd;
+  }
+  
+  /* العنصر النشط */
+  .movie_filter_item.active {
+    border-bottom: 2px solid #ff1f1f;
+    font-weight: 600;
+    color: #ff1f1f;
+  }
+  
+  /* قائمة الترتيب */
+  .movie_sorting {
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: inherit;
+    height: 36px;
+    padding: 0 10px;
+    margin: 0 10px;
+    background-color: #2a2a2a;
+    color: #ff1f1f;
+    box-shadow: 0 0 5px rgba(255, 228, 0, 0.3);
+  }
+  
+  .movie_sorting:focus {
+    border: 1px solid #e50914;
+  }
+  
+  /* عرض الأفلام */
+  .movie_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* بطاقة الفيلم */
+  .movie_card {
+    width: 200px;
+    height: 300px;
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .movie_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .movie_card:hover {
+    transform: scale(1.05);
+  }
+  
+  .movie_card:hover img {
+    opacity: 0.8;
+  }
+  
+  .movie_card-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* زر "شاهد المزيد" */
+  .see_more_button {
+    padding: 12px 26px;
+    background: linear-gradient(to right, #e50914, #ff4d4d);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .see_more_button:hover {
+    background: linear-gradient(to right, #ff1c1c, #ff0000);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  }
+  
+  /* زر "شاهد أقل" */
+  .see_less_button {
+    padding: 12px 26px;
+    background: linear-gradient(to right, #000000, #464444);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .see_less_button:hover {
+    background: linear-gradient(to right, #302e2e, #0e0d0d);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  }
+  
+  /* تحسين التفاعل على الأجهزة المحمولة */
+  @media (max-width: 768px) {
+    .movie_list {
+      margin-left: 0;
+      margin-top: 60px;
+    }
+  
+    .movie_list_header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: none;
+    }
+  
+    .movie_list_heading {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  
+    .movie_filter {
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+  
+    .movie_filter_item {
+      font-size: 14px;
+      padding: 5px 10px;
+      margin: 5px;
+    }
+  
+    .movie_search_input {
+      width: 100%;
+      margin-top: 10px;
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .movie_sorting {
+      width: 100%;
+      margin-top: 10px;
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .see_more_button {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      margin-top: 20px;
+      box-sizing: border-box;
+    }
+    .see_less_button {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        margin-top: 20px;
+        box-sizing: border-box;
+      }
+  }
+  
