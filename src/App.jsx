@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
@@ -15,3 +16,20 @@ const App = () => {
 };
 
 export default App;
+=======
+import { useState } from 'react'
+import './App.css'
+import Home from './Pages/Home'
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+      <Home />
+    </>
+  )
+}
+
+export default App
+>>>>>>> d1d8deaeb230af29e31f878f61b5dcee71bdef71
