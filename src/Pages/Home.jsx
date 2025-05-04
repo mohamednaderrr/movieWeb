@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import HomeSlider from '../Components/Home/HomeSlider';
-import NavbarMenu from "../Components/navbar/Navbar"
+
 
 
 import Hero from '../Components/Hero_Img/Hero';
@@ -8,7 +8,7 @@ const Home = () => {
 
 
     return (
-        <div className='home pb-5'>
+        <div className='home pb-5 bg-black'>
             {/* <NavbarMenu /> */}
             <Hero />
             <HomeSlider content="News" />

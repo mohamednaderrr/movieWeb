@@ -5,20 +5,7 @@ const Footer = () => {
     return (
         <footer className="bg-black text-white  py-2">
             <div className="container px-md-1 px-4">
-                <div className="row mb-4">
-                    <div className="col-auto ">
-                        <FaFacebookF size={20} />
-                    </div>
-                    <div className="col-auto ">
-                        <FaInstagram size={20} />
-                    </div>
-                    <div className="col-auto ">
-                        <FaTwitter size={20} />
-                    </div>
-                    <div className="col-auto ">
-                        <FaYoutube size={20} />
-                    </div>
-                </div>
+
 
                 <div className="row Text">
                     <div className="col-lg-3 col-md-6 col-sm-12 mb-3">
@@ -51,9 +38,24 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="row mt-4">
-                    <div className="col">
-                        <p className="text-white-50 text-center mb-0">© 1997-2025 ReelPath, Inc.</p>
+                <div className="row mt-4 d-flex flex-column-reverse justify-content-center align-items-center ">
+                    <div className=" ">
+                        <p className="text-white-50 text-center mt-2">© 1997-2025 ReelPath, Inc.</p>
+                    </div>
+
+                    <div className="d-flex justify-content-center align-items-center gap-4  pb-3">
+                        <div className="col-auto ">
+                            <FaFacebookF size={22} />
+                        </div>
+                        <div className="col-auto ">
+                            <FaInstagram size={22} />
+                        </div>
+                        <div className="col-auto ">
+                            <FaTwitter size={22} />
+                        </div>
+                        <div className="col-auto ">
+                            <FaYoutube size={22} />
+                        </div>
                     </div>
                 </div>
             </div>

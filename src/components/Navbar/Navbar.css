@@ -1,86 +1,107 @@
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100vh;
-  background-color: #141414; 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 20px;
-  border-right: 1px solid #333;
-  z-index: 1000;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
 }
 
-.navbar h1 {
-  font-size: 28px;
-  color: #ff1f1f; 
-  margin-bottom: 40px;
+.navbar .logo {
+    width: 120px;
 }
 
-.navbar_links {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-}
-
-.navbar_links a {
-  font-size: 18px;
-  font-weight: 500;
-  color: #ccc;
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  position: relative;
-  border-left: 4px solid transparent;
-}
-
-.navbar_links a:hover {
-  background-color: #1e1e1e;
-  color: #ff1f1f; 
-  font-weight: 600;
-  border-left: 4px solid #ff1f1f;
-  transform: translateX(5px);
-}
-
-.navbar_links a.active {
-  background-color: #1e1e1e;
-  color: #ff1f1f;
-  font-weight: 700;
-  border-left: 4px solid #ff1f1f;
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
+.right {
+    display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    border-right: none;
-    border-bottom: 1px solid #333;
-  }
+    gap: 20px;
+}
 
-  .navbar h1 {
-    font-size: 20px;
-    margin-bottom: 0;
-  }
+.right .icon {
+    cursor: pointer;
+}
 
-  .navbar_links {
-    flex-direction: row;
-    gap: 10px;
-    width: auto;
-  }
+.right img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    cursor: pointer;
+}
 
-  .navbar_links a {
-    font-size: 14px;
-    padding: 8px 10px;
-  }
+.right .profile {
+    position: relative;
+}
+
+.right .profile .options {
+    display: none;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.right .profile span {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.right .profile span:hover {
+    background-color: rgb(42, 42, 42);
+}
+
+.right .profile:hover .options {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 28px;
+    left: -20px;
+}
+
+.links .link {
+    color: white;
+    text-decoration: none;
+}
+
+.links .link:hover {
+    color: red;
+    font-style: italic;
+    letter-spacing: 2px;
+    transition: 0.3s ease-in;
+
+}
+
+
+.navbar-toggler {
+    color: white !important;
+    background-color: white !important;
+    background: transparent;
+    border-radius: 4px;
+    padding: 2px 8px !important;
+}
+
+.navbar-toggler:focus {
+    border: none !important;
+    outline: none;
+    box-shadow: none !important;
+}
+
+.offcanvas {
+    height: 450px;
+}
+
+@media screen and (max-width: 750px) {
+    .right .profile:hover .options {
+        position: absolute;
+        top: 0px;
+        left: 31px;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+
+
+    .offcanvas {
+        width: 300px !important;
+        height: 450px;
+    }
 }
